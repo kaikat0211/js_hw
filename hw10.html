@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <label>輸入您的出生西元年
+        <input type="text" id="birth">
+    </label>
+    <script>
+        const a = document.getElementById("birth");
+        a.addEventListener("blur", () => {
+            const today = new Date;
+            const thisYear = today.getFullYear();
+            let ans = thisYear - a.value;
+            alert(`${ans}歲 你好老`);
+        })
+    </script>
+</body>
+
+</html>

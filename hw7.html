@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function ctof(c) {
+        //     let ans = c * 1.8 + 32;
+        //     ans = Math.floor(ans)
+        //     alert(ans);
+        // }
+        // function ftoc(f) {
+        //     let ans1 = (f - 32) * 5 / 9;
+        //     ans1 = Math.floor(ans1);
+        //     alert (ans1);
+        // }
+        // console.log(ctof(-40));
+        // console.log(ftoc(50));
+    </script>
+</head>
+
+<body>
+    <label>輸入攝氏(C)
+    <input type="text" name="" id="Cvalue">
+</label>
+    <br>
+<label>輸入華氏(F)
+    <input type="text" name="" id="Fvalue" style="margin-top: 20px;">
+</label>
+    <script>
+        const c = document.getElementById("Cvalue");
+        c.addEventListener("blur", () => {
+            let ans = c.value * 1.8 + 32;
+            ans = Math.floor(ans);
+            alert(ans);
+        })
+        const f = document.getElementById("Fvalue");
+        f.addEventListener("blur", () => {
+            let ans1 = (f.value - 32) * 5 / 9;
+            ans1 = Math.floor(ans1);
+            alert(ans1);
+        })
+
+    </script>
+
+</body>
+
+</html>

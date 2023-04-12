@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/hw1.css/">
+</head>
+<script>
+    let BMI;
+    let height = parseInt(prompt("身高(公分)"));
+    let weight = parseInt(prompt("體重(公斤)"));
+    height /= 100;
+    BMI = weight / height ** 2;
+    window.alert(`Your BMI is ${BMI}`);
+    if (BMI < 18.5) {
+        window.alert("過輕");
+    } else if (BMI >= 18.5 && BMI < 24) {
+        window.alert("正常");
+    } else if (BMI >= 24 && BMI < 27) {
+        window.alert("過重");
+    } else if (BMI >= 27 && BMI < 30) {
+        window.alert("輕度肥胖");
+    } else if (BMI >= 30 && BMI < 35) {
+        window.alert("中度肥胖");
+    } else if (BMI >= 35) {
+        window.alert("重度肥胖");
+    }
+    
+    
+</script>
+
+<body>
+
+</body>
+
+</html>

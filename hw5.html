@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/hw5.css">
+
+</head>
+
+<body>
+    <section id="nine">
+        <form>
+            <label class="ninelabel">輸入想知道的數字乘法:
+                <input type="text" name="num" id="numImput" class="inputstyle" onchange="a()">
+            </label>
+        </form>
+
+        <div id="container1"></div>
+    </section>
+
+    <script>
+
+        function a() {
+            let inputNum = document.getElementById("numImput");
+            let str = "";
+            let inputValue = inputNum.value;
+            console.log(inputValue);
+            let test2 = document.getElementById("container1");
+            test2.innerHTML = ""
+            c(inputValue);
+        }
+        function c(value) {
+            let test = document.getElementById("container1");
+            let testValue = parseInt(value);
+            if (testValue > 9) {
+                testValue = 9
+            } else if (testValue < 2) {
+                testValue = 2
+            } //限制範圍
+            for (let i = 2; i <= testValue; i++) {
+                let temp_element = "";
+                for (let j = 1; j < 10; j++) {
+                    const ans = `${i} x ${j} =` + i * j;
+                    temp_element += `<div class="nineBox"> ${ans} </div>`;
+                }
+                test.innerHTML += `<div id="box-${i}" class="box-col">${temp_element}</div>`
+
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            c("9")
+        })
+
+    </script>
+</body>
+
+</html>
